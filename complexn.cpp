@@ -3,57 +3,59 @@ using namespace std;
 
 class Complex
 {
- private:
-    int real, imag;
+private:
+    int real1, imag1, real2, imag2;
+    int addreal, addimag, subreal, subimag;
 
- public:
+public:
+
     void input()
     {
-        cin >> real >> imag;
+        cout << "First Complex Number: ";
+        cin >> real1 >> imag1;
+
+        cout << "Second Complex Number: ";
+        cin >> real2 >> imag2;
     }
 
-    void add(Complex c)
+    void add()
     {
-        real = real + c.real;
-        imag = imag + c.imag;
+        addreal = real1 + real2;
+        addimag = imag1 + imag2;
     }
 
-    void sub(Complex c)
+    void sub()
     {
-        real = real - c.real;
-        imag = imag - c.imag;
+        subreal = real1 - real2;
+        subimag = imag1 - imag2;
     }
 
     void display()
     {
-        cout << real;
-        if(imag>=0)
-        cout<<"+"<<imag<<"i";
+        cout << "Addition = " << addreal;
+
+        if (addimag >= 0)
+            cout << " + " << addimag << "i";
         else
-        cout<<"-"<<-imag<<"i";
+            cout << " - " << -addimag << "i";
+
+        cout << "\nSubtraction = " << subreal;
+
+        if (subimag >= 0)
+            cout << " + " << subimag << "i";
+        else
+            cout << " - " << -subimag << "i";
     }
 };
 
 int main()
 {
-    Complex c1, c2, a, s;
+    Complex c;
 
-    cout << "First Complex Number: ";
-    c1.input();
+    c.input();
+    c.add();
+    c.sub();
+    c.display();
 
-    cout << "Second Complex Number: ";
-    c2.input();
-
-    a = c1;
-    a.add(c2);
-
-    s = c1;
-    s.sub(c2);
-
-    cout << "Addition = ";
-    a.display();
-
-    cout << "\nSubtraction = ";
-    s.display();
-
+    return 0;
 }
