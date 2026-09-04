@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>0
 using namespace std;
 
 class Fraction
@@ -9,7 +9,7 @@ private:
 
 public:
     void input()
-    {
+    {   
         cout << "Enter numerator: ";
         cin >> num;
 
