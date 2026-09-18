@@ -22,7 +22,7 @@ public:
     void putdata()
     {
         cout << "\n-----------------------------------------";
-        cout << "\n********** Student Marklist **********";
+        cout << "\n**** Student Marklist ****";
         cout << "\n-----------------------------------------";
 
         cout << "\nRoll No. : " << roll;
@@ -33,8 +33,8 @@ public:
 class StudentExam : public Student
 {
 public:
-    int sub1, sub2, sub3, sub4, sub5, sub6;
-    float per;
+    int sub1, sub2, sub3, sub4, sub5;
+    float per,sum;
 
     void accept_data()
     {
@@ -75,7 +75,10 @@ public:
 
     void calculate()
     {
-        per = (sub1 + sub2 + sub3 + sub4 + sub5 ) / 5.0;
+        sum = (sub1+ sub2 + sub3 + sub4+ sub5);
+        per = (sum) / 5.0;
+
+        cout << "\n\nTotal Sum : " << sum;
 
         cout << "\n\nTotal Percentage : " << per;
         cout << "\n-----------------------------------------\n";
@@ -98,4 +101,3 @@ int main()
     }
 
     return 0;
-}
