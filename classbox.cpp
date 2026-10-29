@@ -1,10 +1,8 @@
 #include <iostream>
 using namespace std;
-
 class Box
 {
-    float length, width, height;
-
+float length, width, height;
 public:
     // Default Constructor
     Box()
@@ -35,7 +33,6 @@ public:
     {
         return length * width * height;
     }
-
     // Display Object Information
     void display()
     {
@@ -44,14 +41,12 @@ public:
         cout << "Height: " << height << endl;
         cout << "Volume: " << volume() << endl;
     }
-
     // Destructor
     ~Box()
     {
         cout << "Destructor called. Object destroyed." << endl;
     }
 };
-
 int main()
 {
     // Default constructor
